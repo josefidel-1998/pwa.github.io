@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Shop</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="manifest.json">
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('services.js');
+    }
+  </script>
+  <link rel="apple-touch-icon" sizes="57x57" href="iconos/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="iconos/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="iconos/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="iconos/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="iconos/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="iconos/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="iconos/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="iconos/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="iconos/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="iconos/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="iconos/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="iconos/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="iconos/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/app/">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/aff158a489.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section class="hero" id="particles-js">
+    <h2>Escoge tus Video-Juegos favoritos</h2>
+  </section>
+
+  <!--portada-->
+  <section id="contenedor-btn">
+  </section>
+  <section id="bannerSeccion">
+    
+  </section>
+
+  <section id="productos">
+  </section>
+
+  <!--Ventana modal-->
+  <section id="modalCarrito">
+    <div id="articuloModal">
+      <div class="cerrar">
+        <a href="#"><i class="fa-solid fa-xmark"></i></a>
+      </div>
+      <div class="btn">
+        <div class="btn-compra">
+          <button id="btnComprar">Comprar</button>
+          <span id="aviso">Agregue un producto</span>
+        </div>
+        <div class="btn-vaciar">
+          <button id="btnVaciar">Vaciar</button>
+        </div>
+      </div>
+      
+      <div class="artCarrito">
+      </div>
+
+    </div>
+  </section>
+  <!--Galeria modal-->
+  <section class="galeriaModal">
+     <a href="#" id="cerrarGaleria"> <i class="fa-solid fa-xmark"></i> </a>
+  </section>
+  <!--Productos-->
+
+  <section id="contenedor">
+    <div id="datosPago">
+      <form>
+        <h2>Detalles de Facturación</h2>  
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <span class="spanInputs" id="spanNombre">Ingrese su nombre</span>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+        <span class="spanInputs" id="spanApellido">Ingrese su apellido</span>
+        <input type="text" id="direccion" name="direccion" placeholder="Direccion" />
+        <span class="spanInputs" id="spanDireccion">Ingrese su direccion</span>
+        <input type="tel" name="telefono" placeholder="telefono" />
+        <input type="email" id="email" name="email" placeholder="email" />
+        <span class="spanInputs" id="spanEmail">Ingrese su email</span>
+        <input type="date" id="tjtDat" name="fecha" placeholder="fecha de entrega" />
+        <select id="tarjDatos">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+        </select>
+          <!--<input type="number" id="tjtNum" name="numero" placeholder="Numero de la tarjeta" />
+          <input type="text" id="tjtNom" name="nombreTarjeta" placeholder="Nombre de la tarjeta" />
+          <input type="number" id="tjtCod" name="codigo" placeholder="Codigo de seguridad" />-->
+       <!--<span class="spanInputs" id="spanTjt">Verifique los datos de su tarjeta</span>--> 
+      </form>
+    </div>
+
+    <div id="factura">
+      
+      <h2 id="total"></h2>
+      <div id="btns-submit">
+        <input type="submit" value="pagar" id="btn-pagar"/>
+        <input type="submit" value="cancelar" id="btn-cancelar"/>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="formulario">
+    <form>
+      <h2 id="form-title">Contactanos</h2>
+      <div class="inputs">
+        <input type="text" placeholder="Nombre" id="nombre"  required  name="name"/>
+        <input type="email" placeholder="Gmail" id="email"  required  name="email"/>
+      </div>
+      <div class="botones">
+        <div class="boton">
+          <input type="checkbox" id="check" />
+          <label for="check">Acepto politicas de seguridad</label>
+        </div>
+        <div class="boton2">
+          <input type="submit" value="enviar" />
+        </div>
+      </div>
+    </form>
+  </section>
+
+
+  <footer>
+    <section class="footer-content">
+      <div class="footer-ul-categoria">
+        <figure>
+          <a href="#"><img src="imagenes/logo.png"></a>
+        </figure>
+        <ul class="categoria">
+          <li class="titulo">Video-juegos</li>
+          <li><a href="#" class="footer-link">Spiderman PS5</a></li>
+          <li><a href="#" class="footer-link">Spiderman Miles Morales PS5</a></li>
+          <li><a href="#" class="footer-link">Guardianes de la Galacia</a></li>
+        </ul>
+        <ul class="categoria">
+          <li class="titulo">Consolas</li>
+          <li><a href="#" class="footer-link">Playstation 5</a></li>
+          <li><a href="#" class="footer-link">Playstation 4</a></li>
+        </ul>
+        <ul class="categoria">
+          <li class="titulo">Accesorios</li>
+          <li><a href="#" class="footer-link">Audifonos-PS5</a></li>
+          <li><a href="#" class="footer-link">Audifonos-PS4</a></li>
+          <li><a href="#" class="footer-link">Auriculares-PS5</a></li>
+        </ul>
+      </div>
+    </section>
+    <div id="redes-sociales">
+      <h2>Siguenos en nuestras redes sociales</h2>
+      <div class="contenedor-sociales">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <p lang="en">Copyright @copy; CodeAndCreate All Rights Reserve</p>
+  </footer>
+  <script src="practica.js"></script>
+  <script src="particles.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
